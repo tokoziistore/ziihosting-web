@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TopUp ZiiHosting</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #0f172a url('https://i.ibb.co/Nx3DNkW/bg-robot.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: rgba(0,0,0,0.7);
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    header h1 {
+      color: #facc15;
+      text-shadow: 0 0 10px #facc15;
+      font-size: 28px;
+    }
+
+    .container {
+      max-width: 650px;
+      margin: auto;
+      padding: 20px;
+      background: rgba(15,23,42,0.85);
+      border-radius: 15px;
+      margin-top: 20px;
+    }
+
+    .game-logos {
+      display: flex;
+      justify-content: space-around;
+      margin: 20px 0;
+    }
+
+    .game-logos img {
+      width: 70px;
+      height: 70px;
+      border-radius: 10px;
+      border: 2px solid #1e40af;
+    }
+
+    label, select, input {
+      width: 100%;
+      margin-bottom: 15px;
+      padding: 12px;
+      font-size: 16px;
+      border: none;
+      border-radius: 10px;
+    }
+
+    input, select {
+      background: #1e293b;
+      color: white;
+    }
+
+    button {
+      width: 100%;
+      background: #22c55e;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      padding: 14px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background: #16a34a;
+    }
+
+    .faq, .sosmed {
+      margin-top: 30px;
+      background: #1e293b;
+      padding: 20px;
+      border-radius: 12px;
+    }
+
+    .faq h2, .sosmed h2 {
+      color: #facc15;
+      margin-bottom: 15px;
+    }
+
+    .faq p {
+      margin-bottom: 10px;
+    }
+
+    .sosmed a {
+      color: #3b82f6;
+      text-decoration: none;
+      margin-right: 15px;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 13px;
+      padding: 20px;
+      color: #94a3b8;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🔥 TOP UP GAME 🔥</h1>
+    <p>Free Fire • Mobile Legends • PUBG Mobile</p>
+  </header>
+
+  <div class="container">
+
+    <div class="game-logos">
+      <img src="https://files.catbox.moe/yq42jg.jpg" alt="FF">
+      <img src="https://files.catbox.moe/bczdyu.jpg" alt="MLBB">
+      <img src="https://files.catbox.moe/m92tjv.jpg" alt="PUBG">
+    </div>
+
+    <form id="orderForm">
+      <label for="game">Pilih Game:</label>
+      <select id="game" required>
+        <option value="">-- Pilih Game --</option>
+        <option value="Free Fire">Free Fire</option>
+        <option value="Mobile Legends">Mobile Legends</option>
+        <option value="PUBG Mobile">PUBG Mobile</option>
+      </select>
+
+      <label for="idgame">ID Game:</label>
+      <input type="text" id="idgame" placeholder="Masukkan ID / UID" required>
+
+      <label for="produk">Pilih Paket:</label>
+      <select id="produk" required>
+        <option value="">-- Pilih Paket --</option>
+        <option value="FF">FF</option>
+        <option value="70 DM - Rp10.000">140 DM - Rp18.000</option>
+        <option value="355 DM - Rp45.000">355 DM - Rp45.000</option>
+         <option value="140 DM - Rp18.000">140 DM - Rp18.000</option>
+          <option value="140 DM - Rp18.000">140 DM - Rp18.000</option>
+          <option value="140 DM - Rp18.000">140 DM - Rp18.000</option>
+      </select>
+
+      <label for="pembayaran">Tf Admin Melalui?:</label>
+      <select id="pembayaran" required>
+        <option value="">-- Pilih --</option>
+        <option value="DANA">DANA</option>
+        <option value="OVO">OVO</option>
+        <option value="Gopay">Gopay</option>
+      </select>
+      <hr style="margin:30px 0; border-color:#334155;">
+
+<h3 style="text-align:center; color:#facc15;">🔁 Alternatif Pembayaran: QRIS</h3>
+<p style="text-align:center; font-size:14px; color:#cbd5e1;">
+Scan kode QRIS berikut jika ingin membayar langsung:
+</p>
+
+<div style="text-align:center; margin:20px 0;">
+  <img src="https://files.catbox.moe/1700wt.jpg" alt="QRIS" width="250" style="border-radius:10px; box-shadow:0 0 10px #0ea5e9;">
+</div>
+
+<p style="text-align:center; font-size:14px;">
+Setelah membayar, <strong>klik tombol di bawah ini</strong> untuk konfirmasi otomatis:
+</p>
+
+<!-- Tombol Bot Order WhatsApp -->
+<button onclick="kirimBotWA()">✅ Konfirmasi Bayar via Bot</button>
+<script>function kirimBotWA() {
+  var game = document.getElementById("game").value;
+  var id = document.getElementById("idgame").value;
+  var produk = document.getElementById("produk").value;
+  var bayar = "QRIS";
+
+  if (!game || !id || !produk) {
+    alert("Lengkapi data game & produk terlebih dahulu!");
+    return;
+  }
+
+  var pesan = `Halo Admin, saya sudah membayar via QRIS.\n\nDetail Pesanan:\nGame: ${game}\nID: ${id}\nPaket: ${produk}\nPembayaran: ${bayar}`;
+  var url = `https://wa.me/6285723904263?text=${encodeURIComponent(pesan)}`;
+  window.open(url, "_blank");
+}</script>
+
+      <button type="button" onclick="kirimWhatsApp(var url = `https://botwa.id/orderpanel?q=${encodeURIComponent(pesan)}`;)"
+
+    <div class="faq">
+      <h2>❓ Tanya Jawab</h2>
+      <p><strong>Apakah aman?</strong><br>Ya! Transaksi langsung via WhatsApp & fast response.</p>
+      <p><strong>Top up berapa lama?</strong><br>Proses 1–5 menit setelah pembayaran.</p>
+      <p><strong>Bisa bayar apa aja?</strong><br>DANA, OVO, Gopay — dan lainnya bisa ditanya dulu.</p>
+    </div>
+
+    <div class="sosmed">
+      <h2>📱 Sosial Media Kami</h2>
+      <a href="https://instagram.com/@bayuahmad_27" target="_blank">Instagram</a>
+      <a href="https://t.me/ziistr" target="_blank">Telegram</a>
+      <a href="https://wa.me/6285723904263" target="_blank">WhatsApp</a>
+    </div>
+
+  </div>
+
+  <footer>
+    &copy; 2025 GamerAbiss.top | Dibuat oleh zii hosting
+  </footer>
+
+  <script>
+    function kirimWhatsApp() {
+      var game = document.getElementById("game").value;
+      var id = document.getElementById("idgame").value;
+      var produk = document.getElementById("produk").value;
+      var bayar = document.getElementById("pembayaran").value;
+
+      if (!game || !id || !produk || !bayar) {
+        alert("Lengkapi semua kolom ya!");
+        return;
+      }
+
+      var pesan = `Halo Admin, saya ingin topup:\nGame: ${game}\nID: ${id}\nPaket: ${produk}\nPembayaran: ${bayar}`;
+      var noWA = "6285723904263"; // Ganti dengan nomor WhatsApp kamu
+      var url = `https://wa.me/${noWA}?text=${encodeURIComponent(pesan)}`;
+
+      window.open(url, "_blank");
+    }
+  </script>
+
+</body>
+</html>
